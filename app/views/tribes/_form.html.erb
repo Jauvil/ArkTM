@@ -1,0 +1,4 @@
+<%= form_for @tribe, url: { action: 'create' }, html: { class: 'newTribeForm' } do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit 'Create New Tribe' %>
+<% end %>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  <h3>A new player would like to join <%= @user.tribe %>!</h3>
+  <h5>Follow this link to approve or deny the application.</h5>
+  </body>
+</html>
+
+<%= @user.email %>,
+  A new user would like to join your tribe. Please login to approve or deny the application.
+
+  Login link: <%= @url %>
