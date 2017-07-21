@@ -1,19 +1,29 @@
 <% if user_signed_in? %>
-  <% if current_user.id == @tribe.owner_id %>
+  <% if @user.id == @tribe.owner_id %>
       <% @tribe_requests.each do |tr| %>
           <h4>
             <span>Requests to Join Your Tribe:</span>
             <span><%= tr.user.email %></span>
             <span><%= link_to 'Accept', tribe_request_accept_path(:user => tr.user.id) %></span>
             <span><%= link_to 'Decline', tribe_request_decline_path(:user =>tr.user.id) %></span>
+        <% end %>
           </h4>
-
-          <h4>
-            <span>Jobs Avaiable For Assignment:</span>
-            <span>Create A New Tribe Job:</span>
-            <span><% link_to %></span>
-          </h4>
-      <% end %>
+          <div>
+            <h4>
+              <div>
+                <span>Jobs Avaiable For Assignment:</span>
+              </div>
+              <div>
+                <% @job_templates.each do |jt| %>
+                <span><%= jt.name %></span>
+                <% end %>
+              </div>
+              <div>
+                <span>Create A New Tribe Job:</span>
+                <span><%= button_to 'Click Me', new_job_template_path, :method => :get %></span>
+              </div>
+            </h4>
+          </div>
   <% end %>
 
 <h6><%= link_to 'Request to join tribe', tribe_request_path %></h6>

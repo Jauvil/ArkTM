@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720233235) do
+ActiveRecord::Schema.define(version: 20170721155615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "job_templates", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "tribe_id"
+    t.string "name"
+    t.text "description"
+    t.index ["tribe_id"], name: "index_job_templates_on_tribe_id"
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "job_template_id"
+    t.index ["job_template_id"], name: "index_jobs_on_job_template_id"
+    t.index ["user_id"], name: "index_jobs_on_user_id"
+  end
 
   create_table "tribe_requests", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -51,6 +69,9 @@ ActiveRecord::Schema.define(version: 20170720233235) do
     t.index ["tribe_id"], name: "index_users_on_tribe_id"
   end
 
+  add_foreign_key "job_templates", "tribes"
+  add_foreign_key "jobs", "job_templates"
+  add_foreign_key "jobs", "users"
   add_foreign_key "tribe_requests", "tribes"
   add_foreign_key "tribe_requests", "users"
   add_foreign_key "users", "tribes"

@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :tribe, optional: true
   has_many :tribe_requests
+  has_many :jobs
 
 end

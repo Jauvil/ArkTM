@@ -2,13 +2,16 @@ class TribesController < ApplicationController
 
   before_action :set_tribe, only: [:show, :update, :destroy, :tribe_request, :tribe_request_accept]
   before_action :set_r_user, only: [:tribe_request_accept, :tribe_request_decline]
+  before_action :set_tribe_request, only: [:tribe_request_accept, :tribe_request_decline]
 
   def index
     @tribes = Tribe.all
   end
 
   def show
+    @user = current_user
     @tribe_requests = TribeRequest.where(tribe_id: @tribe.id, status: 'active')
+    @job_templates = JobTemplate.where(tribe_id: @tribe.id).all
   end
 
   def new
@@ -36,18 +39,12 @@ class TribesController < ApplicationController
   end
 
   def tribe_request_accept
-    @tribe.users << @r_user
-    @tribe.save
-    @tribe_request = TribeRequest.where(user_id: @r_user.id, tribe_id: @tribe.id).first
-    @tribe_request.status = 'accepted'
-    @tribe_request.save
+    @tribe.add_user_via_request(@r_user, @tribe_request)
     redirect_to tribe_path(@tribe)
   end
 
   def tribe_request_decline
-    @tribe_request = TribeRequest.where(user_id: @r_user.id, tribe_id: @tribe.id).first
-    @tribe_request.status = 'declined'
-    @tribe_request.save
+    @tribe_request.declined
     redirect_to tribe_path(@tribe)
   end
 
@@ -67,5 +64,9 @@ class TribesController < ApplicationController
 
   def set_r_user
     @r_user = User.where(id: params[:user]).first
+  end
+
+  def set_tribe_request
+    @tribe_request = TribeRequest.where(user_id: @r_user.id, tribe_id: @tribe.id).first
   end
 end

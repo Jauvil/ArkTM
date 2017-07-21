@@ -1,4 +1,6 @@
 <%= form_for @tribe, url: { action: 'create' }, html: { class: 'newTribeForm' } do |f| %>
+  <h4>Name:</h4>
   <%= f.text_field :name %>
+  <br/>
   <%= f.submit 'Create New Tribe' %>
 <% end %>
