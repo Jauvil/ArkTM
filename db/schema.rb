@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170721155615) do
+ActiveRecord::Schema.define(version: 20170724050307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dinos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "health"
+    t.integer "stamina"
+    t.integer "oxygen"
+    t.integer "food"
+    t.integer "weight"
+    t.integer "melee"
+    t.integer "movement_speed"
+    t.integer "level"
+    t.bigint "tribe_id"
+    t.string "name"
+    t.string "gender"
+    t.string "breed"
+    t.index ["tribe_id"], name: "index_dinos_on_tribe_id"
+  end
 
   create_table "job_templates", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -69,6 +87,7 @@ ActiveRecord::Schema.define(version: 20170721155615) do
     t.index ["tribe_id"], name: "index_users_on_tribe_id"
   end
 
+  add_foreign_key "dinos", "tribes"
   add_foreign_key "job_templates", "tribes"
   add_foreign_key "jobs", "job_templates"
   add_foreign_key "jobs", "users"

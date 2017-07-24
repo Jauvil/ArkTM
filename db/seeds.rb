@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+tribe_list = ['NSPG', 'AOD', 'NimbleTribe']
+
+tribe_list.each do |name|
+  Tribe.create(name: name)
+end

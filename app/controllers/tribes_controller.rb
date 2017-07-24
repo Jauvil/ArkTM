@@ -9,9 +9,11 @@ class TribesController < ApplicationController
   end
 
   def show
+    @members = User.where(tribe: @tribe).all
     @user = current_user
     @tribe_requests = TribeRequest.where(tribe_id: @tribe.id, status: 'active')
     @job_templates = JobTemplate.where(tribe_id: @tribe.id).all
+    @dinos = Dino.where(tribe_id: @tribe.id).all
   end
 
   def new

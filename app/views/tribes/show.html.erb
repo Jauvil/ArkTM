@@ -8,24 +8,69 @@
             <span><%= link_to 'Decline', tribe_request_decline_path(:user =>tr.user.id) %></span>
         <% end %>
           </h4>
-          <div>
+          <div style="float: left; margin-left: 300px">
+            <h2><%= @tribe.name %> members:</h2>
+            <% @members.each do |member| %>
+                <h4><%= link_to member.email, user_path(member) %></h4>
+            <% end %>
+          </div>
+          <div style="float: left; margin-left: 200px;">
             <h4>
               <div>
                 <span>Jobs Avaiable For Assignment:</span>
               </div>
               <div>
                 <% @job_templates.each do |jt| %>
-                <span><%= jt.name %></span>
+                <span><%= link_to jt.name, job_template_path(jt) %></span>
+                    <br/>
                 <% end %>
-              </div>
-              <div>
-                <span>Create A New Tribe Job:</span>
-                <span><%= button_to 'Click Me', new_job_template_path, :method => :get %></span>
+                <br/>
+                <span><%= button_to 'New Tribe Job', new_job_template_path, :method => :get %></span>
               </div>
             </h4>
           </div>
+        <div style="margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+            clear: both">
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Gender</th>
+                <th>Health</th>
+                <th>Stamina</th>
+                <th>Oxygen</th>
+                <th>Food</th>
+                <th>Weight</th>
+                <th>Melee</th>
+                <th>Movement Speed</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% @dinos.each do |dino| %>
+              <tr>
+                <td><%= dino.name %></td>
+                <td><%= dino.breed %></td>
+                <td><%= dino.gender %></td>
+                <td><%= dino.health %></td>
+                <td><%= dino.stamina %></td>
+                <td><%= dino.oxygen %></td>
+                <td><%= dino.food %></td>
+                <td><%= dino.weight %></td>
+                <td><%= dino.melee %></td>
+                <td><%= dino.movement_speed %></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <%= button_to 'Add Dino', new_dino_path, :method => :get %>
+        </div>
   <% end %>
-
-<h6><%= link_to 'Request to join tribe', tribe_request_path %></h6>
-
+  <% if @user.tribe.blank? %>
+    <h6><%= link_to 'Request to join tribe', tribe_request_path %></h6>
+  <% end %>
 <% end %>

@@ -1,0 +1,60 @@
+<div>
+<%= form_for @dino do |f| %>
+  <div>
+    <span>Dino Name: </span>
+    <span><%= f.text_field :name %></span>
+  </div>
+    <br/>
+  <div>
+    <span>Dino Breed: </span>
+    <span><%= f.text_field :breed %></span>
+  </div>
+    <br/>
+  <div>
+    <span>Dino Gender: </span>
+    <span><%= f.text_field :gender %></span>
+  </div>
+      <br />
+  <div>
+    <span>Dino Level: </span>
+    <span><%= f.text_field :level %></span>
+  </div>
+      <br/>
+  <div>
+    <span>Dino Health: </span>
+    <span><%= f.text_field :health %></span>
+  </div>
+    <br/>
+  <div>
+    <span>Dino Stamina: </span>
+    <span><%= f.text_field :stamina %></span>
+  </div>
+    <br/>
+  <div>
+    <span>Dino Oxygen: </span>
+    <span><%= f.text_field :oxygen %></span>
+  </div>
+    <br/>
+  <div>
+    <span>Dino Food: </span>
+    <span><%= f.text_field :food %></span>
+  </div>
+    <br/>
+  <div>
+    <span>Dino Weight: </span>
+    <span><%= f.text_field :weight %></span>
+  </div>
+    <br/>
+  <div>
+    <span>Dino Melee: </span>
+    <span><%= f.text_field :melee %></span>
+  </div>
+    <br/>
+  <div>
+    <span>Dino Movement Speed: </span>
+    <span><%= f.text_field :movement_speed %></span>
+  </div>
+      <br/>
+  <%= f.submit 'Create Dino' %>
+<% end %>
+</div>
