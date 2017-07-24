@@ -18,4 +18,10 @@ class DinosController < ApplicationController
     params.require(:dino).permit(:name, :health, :stamina, :oxygen, :food, :weight, :melee, :movement_speed,
                                  :level, :breed, :tribe_id, :gender)
   end
+
+  def breed_calc
+    @tribe = Tribe.find_by_id(current_user.tribe.id)
+
+    @best_dino_array = @tribe.opt_breed_pair(breed)
+  end
 end

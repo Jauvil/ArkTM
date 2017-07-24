@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e82d52-9edf-4116-b372-acb01bb70eba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dinos/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dinos/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/job_templates/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/job_templates_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/job_templates_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tribes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tribes_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/tribes.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tribes.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dinos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dinos_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/tribe.rb" afterPath="$PROJECT_DIR$/app/models/tribe.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tribes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tribes/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -42,8 +35,8 @@
       <file leaf-file-name="dinos_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/dinos_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+            <state relative-caret-position="345">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,25 +62,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tribe.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tribe.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/tribe.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="570">
+              <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tribes.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tribes.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/tribes/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+            <state relative-caret-position="423">
+              <caret line="63" column="51" lean-forward="true" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
               <folding>
                 <element signature="e#464#503#0#HTML" expanded="true" />
                 <element signature="e#724#764#0#HTML" expanded="true" />
-                <element signature="e#1273#1406#0#HTML" expanded="true" />
+                <element signature="e#1273#1375#0#HTML" expanded="true" />
+                <element signature="e#2653#2682#0#HTML" expanded="true" />
+                <element signature="e#2701#2748#0#HTML" expanded="true" />
+                <element signature="e#2832#2882#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,10 +139,11 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/tribes_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/dinos/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/dinos_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/tribes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/dino.rb" />
         <option value="$PROJECT_DIR$/app/models/tribe.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/tribes.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/dinos_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/tribes/show.html.erb" />
       </list>
     </option>
   </component>
@@ -395,6 +402,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArkTM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArkTM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArkTM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArkTM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -741,12 +788,12 @@
       <option name="presentableId" value="Default" />
       <updated>1500588661598</updated>
       <workItem from="1500588663149" duration="11950000" />
-      <workItem from="1500843745822" duration="10103000" />
+      <workItem from="1500843745822" duration="14625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22053000" />
+    <option name="totallyTimeSpent" value="26575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -822,7 +869,10 @@
           <folding>
             <element signature="e#464#503#0#HTML" expanded="true" />
             <element signature="e#724#764#0#HTML" expanded="true" />
-            <element signature="e#1273#1406#0#HTML" expanded="true" />
+            <element signature="e#1273#1375#0#HTML" expanded="true" />
+            <element signature="e#2653#2682#0#HTML" expanded="true" />
+            <element signature="e#2701#2748#0#HTML" expanded="true" />
+            <element signature="e#2832#2882#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1090,18 +1140,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tribes/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-          <folding>
-            <element signature="e#464#503#0#HTML" expanded="true" />
-            <element signature="e#724#764#0#HTML" expanded="true" />
-            <element signature="e#1273#1406#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/dino.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1118,14 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dinos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dinos/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-119">
@@ -1136,9 +1166,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/tribe.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="570">
+          <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tribes.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dinos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tribes/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="63" column="51" lean-forward="true" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+          <folding>
+            <element signature="e#464#503#0#HTML" expanded="true" />
+            <element signature="e#724#764#0#HTML" expanded="true" />
+            <element signature="e#1273#1375#0#HTML" expanded="true" />
+            <element signature="e#2653#2682#0#HTML" expanded="true" />
+            <element signature="e#2701#2748#0#HTML" expanded="true" />
+            <element signature="e#2832#2882#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

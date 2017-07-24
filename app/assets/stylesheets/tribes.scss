@@ -1,3 +1,26 @@
 // Place all the styles related to the Tribes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table.dino-table {
+  font-family: verdana,arial,sans-serif;
+  font-size:11px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #3A3A3A;
+  border-collapse: collapse;
+}
+table.dino-table th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #3A3A3A;
+  background-color: #B3B3B3;
+}
+table.dino-table td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #3A3A3A;
+  background-color: #ffffff;
+}

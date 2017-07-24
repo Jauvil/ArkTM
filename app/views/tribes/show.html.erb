@@ -29,25 +29,24 @@
               </div>
             </h4>
           </div>
-        <div style="margin: auto;
+        <div style="margin-left: 280px;
             width: 50%;
-            border: 3px solid green;
             padding: 10px;
             clear: both">
-
-          <table>
+          <h2>Tribe Dinos: </h2>
+          <table class="dino-table">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Breed</th>
-                <th>Gender</th>
-                <th>Health</th>
-                <th>Stamina</th>
-                <th>Oxygen</th>
-                <th>Food</th>
-                <th>Weight</th>
-                <th>Melee</th>
-                <th>Movement Speed</th>
+                <th class="first">Name</th>
+                <th class="notFirst">Breed</th>
+                <th class="notFirst">Gender</th>
+                <th class="notFirst">Health</th>
+                <th class="notFirst">Stamina</th>
+                <th class="notFirst">Oxygen</th>
+                <th class="notFirst">Food</th>
+                <th class="notFirst">Weight</th>
+                <th class="notFirst">Melee</th>
+                <th class="notFirst">Movement Speed</th>
               </tr>
             </thead>
             <tbody>
@@ -67,7 +66,14 @@
             <% end %>
             </tbody>
           </table>
-          <%= button_to 'Add Dino', new_dino_path, :method => :get %>
+          <br />
+          <div style="display: inline-block">
+            <div style="display: inline-block; margin-left: 5px"><%= button_to 'Add Dino', new_dino_path, :method => :get %></div>
+            <div style="display: inline-block; margin-left: 440px;">
+              <div>Button to select dino breed pass it through as params</div>
+              <div><%= button_to 'Breeding Calculator', tribe_path(@tribe) %></div>
+            </div>
+          </div>
         </div>
   <% end %>
   <% if @user.tribe.blank? %>
