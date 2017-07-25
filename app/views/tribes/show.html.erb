@@ -70,8 +70,11 @@
           <div style="display: inline-block">
             <div style="display: inline-block; margin-left: 5px"><%= button_to 'Add Dino', new_dino_path, :method => :get %></div>
             <div style="display: inline-block; margin-left: 440px;">
-              <div>Button to select dino breed pass it through as params</div>
-              <div><%= button_to 'Breeding Calculator', tribe_path(@tribe) %></div>
+              <!-- TODO: Get this to work as a get method as opposed to a post! -->
+              <%= form_tag('/breed_calc', {method: :get}) do |f| %>
+                <div><%= f.select_tag('breedSelect', options_for_select(%w(Pteranodon Rex))) %></div>
+                <div><%= f.submit_tag 'Breeding Calculator' %></div>
+              <% end %>
             </div>
           </div>
         </div>

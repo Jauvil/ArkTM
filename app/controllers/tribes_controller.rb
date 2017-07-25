@@ -1,6 +1,6 @@
 class TribesController < ApplicationController
 
-  before_action :set_tribe, only: [:show, :update, :destroy, :tribe_request, :tribe_request_accept]
+  before_action :set_tribe, only: [:show, :update, :destroy, :tribe_request, :tribe_request_accept, :breed_calc]
   before_action :set_r_user, only: [:tribe_request_accept, :tribe_request_decline]
   before_action :set_tribe_request, only: [:tribe_request_accept, :tribe_request_decline]
 
@@ -53,6 +53,10 @@ class TribesController < ApplicationController
 
   def destroy
 
+  end
+
+  def breed_calc
+    @best_dinos = @tribe.opt_breed_pair(params[:breedSelect])
   end
 
   private
