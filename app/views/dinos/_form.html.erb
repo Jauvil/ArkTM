@@ -7,12 +7,12 @@
     <br/>
   <div>
     <span>Dino Breed: </span>
-    <span><%= f.text_field :breed %></span>
+    <span><%= f.collection_select(:breed, Dino.select("DISTINCT(BREED)"), :breed, :breed) %></span>
   </div>
     <br/>
   <div>
     <span>Dino Gender: </span>
-    <span><%= f.text_field :gender %></span>
+    <span><%= f.collection_select(:gender, Dino.select("DISTINCT(GENDER)"), :gender, :gender) %></span>
   </div>
       <br />
   <div>

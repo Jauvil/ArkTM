@@ -12,6 +12,11 @@ class DinosController < ApplicationController
     end
   end
 
+  def breed_calc
+    @tribe = Tribe.find_by_id(current_user.tribe.id)
+    @best_dino_array = @tribe.opt_breed_pair(breed)
+  end
+
   private
 
   def dino_params
@@ -19,9 +24,4 @@ class DinosController < ApplicationController
                                  :level, :breed, :tribe_id, :gender)
   end
 
-  def breed_calc
-    @tribe = Tribe.find_by_id(current_user.tribe.id)
-
-    @best_dino_array = @tribe.opt_breed_pair(breed)
-  end
 end
