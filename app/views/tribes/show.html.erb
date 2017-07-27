@@ -76,7 +76,19 @@
             <div style="display: inline-block; margin-left: 440px;">
               <!-- TODO: Get this to work as a get method as opposed to a post! -->
               <%= form_tag({ :action => 'breed_calc'}) do %>
-                <div><%= select_tag('breedSelect', options_for_select(%w(Pteranodon Rex))) %></div>
+                <div><%= select_tag('breedSelect', options_for_select(%w(Achatina Allosaurus Ammonite
+                                Angler Ankylosaurus Archaeopteryx Argentavis Baryonyx Basilosaurus
+                                Beelzebufo Brontosaurus Carbonemys Carnotaurus Castoroides Chalicotherium
+                                Compy Daeodon Dilophosaur Dimetrodon Dimorphodon Diplocaulus Diplodocus
+                                Direbear Direwolf Dodo Doedicurus Dunkleosteus Electrophorus Equus Gallimimus
+                                Giganotosaurus Gigantopithecus Ichthyornis Ichthyosaurus Iguanodon Jerboa
+                                Kairuku Kaprosuchus Kentrosaurus Lymantria Lystrosaurus Mammoth Manta Mantis
+                                Megaloceros Megalodon Megalosaurus Mesopithecus Microraptor Morellatops
+                                Mosasaurus Moschops Oviraptor Ovis Pachy Pachyrhinosaurus Paracer Parasaur
+                                Pegomastax Pelagornis Phiomia Plesiosaur Procoptodon Pteranodon Pulmonoscorpius
+                                Purlovia Quetzal Raptor Rex RockElemental Sabertooth Sarco Spinosaurus
+                                Stegosaurus Tapejara TerrorBird Therizinosaurus ThornyDragon
+                                Thylacoleo Triceratops Troodon Tusoteuthis Vulture WoollyRhino Wyvern))) %></div>
                 <div><%= submit_tag 'Breeding Calculator' %></div>
               <% end %>
             </div>
