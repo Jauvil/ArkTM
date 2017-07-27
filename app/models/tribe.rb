@@ -22,10 +22,18 @@ class Tribe < ApplicationRecord
   def opt_breed_pair(breed)
     best_dinos_array = self.best_stats(breed)
     compiled_stats = best_dinos_array.group_by(&:first).map { |k, vs| [k, vs.map(&:last)]}
-    compiled_stats.each do |dino_array|
-      puts dino_array[0].name + dino_array[0].gender
+    sorted_cs = compiled_stats.sort_by(&:size).reverse
+    dino_1_a = sorted_cs.shift
+    dino_1 = dino_1_a[0]
+    i = 0
+    while i < sorted_cs.count
+      dino_2_a = sorted_cs.shift
+      dino_2 = dino_2_a[0]
+      if dino_2.gender != dino_1.gender
+        return [dino_1, dino_2]
+      end
+      i =+ 1
     end
-
   end
 
   def best_stats(breed)
@@ -41,31 +49,31 @@ class Tribe < ApplicationRecord
 
   def max_health_dino(dino_list)
     max_health_value = dino_list.maximum(:health)
-    return [dino_list.find_by_health(max_health_value), "health"]
+    return [dino_list.find_by_health(max_health_value), "1 health"]
   end
 
   def max_stamina_dino(dino_list)
     max_stamina_value = dino_list.maximum(:stamina)
-    return [dino_list.find_by_stamina(max_stamina_value), "stamina"]
+    return [dino_list.find_by_stamina(max_stamina_value), "3 stamina"]
   end
 
   def max_oxygen_dino(dino_list)
     max_oxygen_value = dino_list.maximum(:oxygen)
-    return [dino_list.find_by_oxygen(max_oxygen_value), "oxygen"]
+    return [dino_list.find_by_oxygen(max_oxygen_value), "6 oxygen"]
   end
 
   def max_food_dino(dino_list)
     max_food_value = dino_list.maximum(:food)
-    return [dino_list.find_by_food(max_food_value), "food"]
+    return [dino_list.find_by_food(max_food_value), "5 food"]
   end
 
   def max_weight_dino(dino_list)
     max_weight_value = dino_list.maximum(:weight)
-    return [dino_list.find_by_weight(max_weight_value), "weight"]
+    return [dino_list.find_by_weight(max_weight_value), "4 weight"]
   end
 
   def max_melee_dino(dino_list)
     max_melee_value = dino_list.maximum(:melee)
-    return [dino_list.find_by_melee(max_melee_value), "melee"]
+    return [dino_list.find_by_melee(max_melee_value), "2 melee"]
   end
 end

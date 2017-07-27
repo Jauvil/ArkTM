@@ -1,1 +1,5 @@
-<%= @best_dinos[0].name %>
+<% if @best_dinos.blank? %>
+  You have no suitable breeding partners.
+<% else %>
+    You should breed <strong><%= @best_dinos[0].name %></strong> with <strong><%= @best_dinos[1].name %></strong>
+<% end %>
