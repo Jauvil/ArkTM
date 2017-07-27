@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e82d52-9edf-4116-b372-acb01bb70eba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tribes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tribes/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/tribe.rb" afterPath="$PROJECT_DIR$/app/models/tribe.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -52,20 +52,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tribe.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tribe.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/tribe.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+            <state relative-caret-position="117">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tribes/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="1155">
               <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
               <folding />
             </state>
@@ -123,12 +123,12 @@
         <option value="$PROJECT_DIR$/app/models/dino.rb" />
         <option value="$PROJECT_DIR$/app/controllers/tribes_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/models/tribe.rb" />
         <option value="$PROJECT_DIR$/app/views/tribes/breed_calc.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/dinos_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/tribes/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dinos/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tribes/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/tribe.rb" />
       </list>
     </option>
   </component>
@@ -736,12 +736,12 @@
       <workItem from="1500588663149" duration="11950000" />
       <workItem from="1500843745822" duration="16016000" />
       <workItem from="1500960897328" duration="21366000" />
-      <workItem from="1501164369602" duration="9178000" />
+      <workItem from="1501164369602" duration="9502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58510000" />
+    <option name="totallyTimeSpent" value="58834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -778,7 +778,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/models/tribe.rb</url>
-          <line>21</line>
+          <line>20</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -1071,22 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/tribe.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dinos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tribes/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1113,8 +1097,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tribes/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="1155">
           <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dinos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/tribe.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding />
         </state>
       </provider>
