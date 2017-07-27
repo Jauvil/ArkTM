@@ -1,6 +1,6 @@
 <% @tribes.each do |tribe| %>
-  <h1><%= tribe.name %></h1>
-  <h3><%= link_to 'Vist Tribe Page', tribe_path(tribe) %></h3>
+  <h1><%= link_to tribe.name, tribe_path(tribe) %></h1>
+    <br/>
 <% end %>
 <% if user_signed_in? %>
 <h4><%= link_to 'Create A Tribe', new_tribe_path %></h4>

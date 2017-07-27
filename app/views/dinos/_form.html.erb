@@ -7,7 +7,7 @@
     <br/>
   <div>
     <span>Dino Breed: </span>
-    <span><%= f.collection_select(:breed, Dino.select("DISTINCT(BREED)"), :breed, :breed) %></span>
+    <span><%= f.collection_select(:breed, Dino.select("DISTINCT(BREED)").order(:breed), :breed, :breed) %></span>
   </div>
     <br/>
   <div>
