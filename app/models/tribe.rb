@@ -48,7 +48,12 @@ class Tribe < ApplicationRecord
 
   def max_health_dino(dino_list)
     max_health_value = dino_list.maximum(:health)
-    return [dino_list.find_by_health(max_health_value), "1 health"]
+    max_health_dinos = dino_list.where(health: max_health_value)
+    if max_health_dinos.count == 1
+      return [max_health_dinos.first, "1 health"]
+    else
+      return[max_health_dinos[1], "1 health"]
+    end
   end
 
   def max_stamina_dino(dino_list)
